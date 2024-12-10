@@ -5,7 +5,8 @@ import SignupCreator from './pages/Login_Creator/SingupCreator'
 import BuisnessSignup from './pages/Login_Creator/BuisnessSignup'
 import AddressSignup from './pages/Login_Creator/AddressSignup'
 import ShopPage1 from './pages/Shop_pages/ShopPage1'
-import { NotFoundPage } from './pages/NoteFound'
+import { NotFound } from './pages/NoteFound'
+// import { NotFoundPage } from './pages/NoteFound'
 // import FullShoppage from './pages/FullShoppage'
 // import LoginCreator from './pages/Login_Creator/LoginCreator'
 
@@ -28,7 +29,7 @@ const App = () => {
   <Route path='/brandname' element={<BuisnessSignup/>}/>
   <Route path='/createaddress' element={<AddressSignup/>}/>
   <Route path='/create-brand-shop' element={<ShopPage1/>}/>
-  <Route path='*' element={<NotFoundPage/>}/>
+  <Route path='*' element={<NotFound/>}/>
 </Routes>
     </>
   )

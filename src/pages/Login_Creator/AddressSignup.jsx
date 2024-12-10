@@ -144,7 +144,7 @@ const AddressSignup = () => {
                         type="submit"
                         className="bg-green-500 text-white py-3 rounded-md hover:bg-green-600 transition duration-300 w-full"
                     >
-                        <Link to={"/createbrand"}>Start Selling</Link>
+                        <Link to={"/create-brand-shop"}>Start Selling</Link>
                     </button>
                 </form>
             </div>

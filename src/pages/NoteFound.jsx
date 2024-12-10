@@ -1,4 +1,4 @@
-export const NotFoundPage = () => {
+export const NotFound = () => {
     return (
         <div className="h-screen flex flex-col justify-center items-center bg-gray-100 text-gray-800">
             <h1 className="text-6xl font-bold mb-4">404</h1>
