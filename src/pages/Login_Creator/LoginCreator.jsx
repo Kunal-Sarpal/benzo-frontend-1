@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const LoginCreator = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex justify-center items-center h-screen bg-green-100">
       <div className="bg-white shadow-lg border border-gray-300 rounded-lg w-11/12 max-w-md p-6 flex flex-col space-y-6">
@@ -25,8 +26,8 @@ const LoginCreator = () => {
           Login
         </button>
 
-        <button className="bg-transparent text-green-500 border border-green-500 py-2 rounded-md transition duration-300 w-full">
-          <Link to={"/createaccount"}>Create Your Account</Link>
+        <button onClick={() => navigate("/createaccount")} className="bg-transparent text-green-500 border border-green-500 py-2 rounded-md w-full">
+           create Account
         </button>
       </div>
     </div>

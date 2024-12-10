@@ -27,6 +27,7 @@ const App = () => {
   <Route path='/brandname' element={<BuisnessSignup/>}/>
   <Route path='/createaddress' element={<AddressSignup/>}/>
   <Route path='/create-brand-shop' element={<ShopPage1/>}/>
+  <Route path='*' element={"Not Found"}/>
 </Routes>
     </>
   )

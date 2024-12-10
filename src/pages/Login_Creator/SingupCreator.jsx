@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const SignupCreator = () => {
     const [isCreatingAccount, setIsCreatingAccount] = useState(false);
+    const navigate = useNavigate();
 
     const handleSwitchToCreateAccount = () => {
         setIsCreatingAccount(true);
@@ -41,8 +42,8 @@ const SignupCreator = () => {
                             />
                         </div>
 
-                        <button className="bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition duration-300 w-full">
-                            <Link to={"/brandname"}> Create</Link>
+                        <button onClick={() => navigate("/brandname")} className="bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition duration-300 w-full">
+                            Create Account
                         </button>
 
                         <p className="text-center text-gray-600 mt-4">
@@ -51,7 +52,7 @@ const SignupCreator = () => {
                                 className="text-green-500 cursor-pointer"
                                 onClick={handleSwitchToLogin}
                             >
-                                Login here
+                                <button onClick={() => navigate("/loginaccount") }>Login here</button>
                             </span>
                         </p>
                     </>

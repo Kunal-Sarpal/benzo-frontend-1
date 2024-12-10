@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const BusinessSignup = () => {
+    const navigate = useNavigate();
     return (
         <div className="flex justify-center items-center h-screen bg-gray-50">
             <div className="bg-white shadow-lg border border-gray-300 rounded-lg w-11/12 max-w-md p-6 space-y-6">
@@ -32,8 +33,8 @@ const BusinessSignup = () => {
                 </div>
 
                 {/* Submit Button */}
-                <button className="bg-green-500 text-white py-3 rounded-md hover:bg-green-600 transition duration-300 w-full mt-6">
-                    <Link to={"/createaddress"}> Next Step</Link>
+                <button onClick={() => navigate("/createaddress")} className="bg-green-500 text-white py-3 rounded-md hover:bg-green-600 transition duration-300 w-full mt-6">
+                     Next Step
                 </button>
             </div>
         </div>
