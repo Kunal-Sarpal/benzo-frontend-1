@@ -17,7 +17,7 @@ const App = () => {
    
   <Route path='/' element={
           <div  className="bg-green-100 text-white flex justify-center items-center rounded-md hover:bg-green-100 transition duration-300 w-full h-screen shadow-md ">
-              <button className='bg-green-500 text-white flex justify-center items-center rounded-md hover:bg-green-600 transition duration-300  p-2 px-4 w-fit h-fit shadow-md mt-6'><Link to={"/login-account"}>
+              <button className='bg-green-500 text-white flex justify-center items-center rounded-md hover:bg-green-600 transition duration-300  p-2 px-4 w-fit h-fit shadow-md mt-6'><Link to={"/loginaccount"}>
               Start Selling</Link>
             </button>
         </div>
