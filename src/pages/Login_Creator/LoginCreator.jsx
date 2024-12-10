@@ -25,8 +25,8 @@ const LoginCreator = () => {
           Login
         </button>
 
-        <button className="bg-transparent text-green-500 border border-green-500 py-2 rounded-md hover:bg-green-500 hover:text-white transition duration-300 w-full">
-          <Link to={"/create-account"}>Create Your Account</Link>
+        <button className="bg-transparent text-green-500 border border-green-500 py-2 rounded-md transition duration-300 w-full">
+          <Link to={"/createaccount"}>Create Your Account</Link>
         </button>
       </div>
     </div>

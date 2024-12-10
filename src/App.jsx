@@ -22,10 +22,10 @@ const App = () => {
             </button>
         </div>
     }/>
-  <Route path='/create-account' element={<SignupCreator/>}/>
-  <Route path='/login-account' element={<LoginCreator/>}/>
-  <Route path='/brand-name' element={<BuisnessSignup/>}/>
-  <Route path='/create-address' element={<AddressSignup/>}/>
+  <Route path='/createaccount' element={<SignupCreator/>}/>
+  <Route path='/loginaccount' element={<LoginCreator/>}/>
+  <Route path='/brandname' element={<BuisnessSignup/>}/>
+  <Route path='/createaddress' element={<AddressSignup/>}/>
   <Route path='/create-brand-shop' element={<ShopPage1/>}/>
 </Routes>
     </>

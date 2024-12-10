@@ -33,7 +33,7 @@ const BusinessSignup = () => {
 
                 {/* Submit Button */}
                 <button className="bg-green-500 text-white py-3 rounded-md hover:bg-green-600 transition duration-300 w-full mt-6">
-                    <Link to={"/create-address"}> Next Step</Link>
+                    <Link to={"/createaddress"}> Next Step</Link>
                 </button>
             </div>
         </div>

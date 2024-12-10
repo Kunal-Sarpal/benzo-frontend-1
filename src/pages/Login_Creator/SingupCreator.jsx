@@ -42,7 +42,7 @@ const SignupCreator = () => {
                         </div>
 
                         <button className="bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition duration-300 w-full">
-                            <Link to={"/brand-name"}> Create Account</Link>
+                            <Link to={"/brandname"}> Create</Link>
                         </button>
 
                         <p className="text-center text-gray-600 mt-4">
