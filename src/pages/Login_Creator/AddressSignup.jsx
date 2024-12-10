@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const AddressSignup = () => {
+    const navigate = useNavigate();
     // Form state
     const [formData, setFormData] = useState({
         address1: '',
@@ -142,9 +143,10 @@ const AddressSignup = () => {
                     {/* Submit Button */}
                     <button
                         type="submit"
+                        onClick={() => navigate("/create-brand-shop")}
                         className="bg-green-500 text-white py-3 rounded-md hover:bg-green-600 transition duration-300 w-full"
                     >
-                        <Link to={"/create-brand-shop"}>Start Selling</Link>
+                       Start Selling
                     </button>
                 </form>
             </div>

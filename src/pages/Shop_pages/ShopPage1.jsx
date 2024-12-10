@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ShopPage1 = () => {
+    const navigate = useNavigate();
     const categories = {
         Grocery: [
             "Organic",
@@ -51,8 +53,8 @@ const ShopPage1 = () => {
     };
 
     return (
-        <div className="min-h-screen   bg-gray-100  flex flex-col items-center justify-center">
-            <div className="w-full max-w-4xl p-10  bg-white shadow-lg border-green-500 duration-200 transition-all ease-in-out h-fit ">
+        <div className="min-h-screen   bg-green-100  flex flex-col items-center justify-center">
+            <div className="w-full  md:max-w-4xl p-10 md:p-20  bg-white shadow-lg border-green-500 duration-200 transition-all ease-in-out h-screen md:h-fit">
                 <h1 className="text-3xl font-normal text-gray-800 mb-8 text-center">
                     Tell us About Your <span className="text-green-500">Brand</span>
                 </h1>
@@ -62,7 +64,7 @@ const ShopPage1 = () => {
                         Select Product Category
                     </label>
                     <select 
-                        className="duration-200 transition-all ease-in-out w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                        className="duration-200 transition-all ease-in-out w-full px-4 py-2 border border-blue-500 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
                         value={selectedCategory}
                         onChange={(e) => {
                             setSelectedCategory(e.target.value);
@@ -89,7 +91,7 @@ const ShopPage1 = () => {
                     <input
                         type="text"
                         placeholder="Enter your shop name"
-                        className=" duration-200 transition-all ease-in-out w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                        className="border-blue-500 duration-200 transition-all ease-in-out w-full px-4 py-2 border  rounded focus:outline-none focus:ring-2 focus:ring-green-500"
                         required
                     />
                 </div>
@@ -99,7 +101,7 @@ const ShopPage1 = () => {
                     </label>
                     <textarea
                         placeholder="Describe your shop"
-                        className="duration-200 transition-all ease-in-out w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+                        className=" border-blue-500 duration-200 transition-all ease-in-out w-full px-4 py-2 border  rounded focus:outline-none focus:ring-2 focus:ring-green-500"
                         rows="4"
                         required
                     ></textarea>
@@ -148,8 +150,8 @@ const ShopPage1 = () => {
 
                 {/* Submit Button */}
                 <div className="text-center mt-10">
-                    <button className="px-6 py-3 bg-green-500 text-white rounded shadow-lg hover:bg-green-600 transition">
-                        Porceed to the store
+                    <button onClick={() => navigate("/shop-home-page")} className="px-6 py-3 bg-green-500 text-white rounded shadow-lg hover:bg-green-600 transition">
+                        Proceed to the store
                     </button>
                 </div>
             </div>

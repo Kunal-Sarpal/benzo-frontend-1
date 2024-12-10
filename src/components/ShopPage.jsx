@@ -8,7 +8,7 @@ import Carousel from "./Cariusel";
 
 const ShopPage = () => {
   return (
-    <div className=" bg-gray-100 flex w-full rounded-l-[40px] shadow-2xl shadow-black   px-5 bg-grenn-500 ">
+    <div className=" bg-gray-100 flex w-full rounded-l-[40px] shadow-2xl    px-5 bg-grenn-500 ">
       <div className="w-full  p-10  ">
         {/* Header Section */}
         <div className="flex justify-between  mb-8 ">
