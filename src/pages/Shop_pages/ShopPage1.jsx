@@ -51,18 +51,18 @@ const ShopPage1 = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 py-10 flex flex-col items-center">
-            <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg p-8">
-                <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-                    Tell Us About Your Brand
+        <div className="min-h-screen   bg-gray-100  flex flex-col items-center">
+            <div className="w-full max-w-4xl p-20 bg-white shadow-lg border-green-500 duration-200 transition-all ease-in-out h-fit ">
+                <h1 className="text-3xl font-normal text-gray-800 mb-8 text-center">
+                    Tell us About Your <span className="text-green-500">Brand</span>
                 </h1>
                 {/* Product Category Selection */}
-                <div className="mb-6">
+                <div className="mb-6 duration-200 transition-all ease-in-out">
                     <label className="block text-gray-700 font-medium mb-2">
                         Select Product Category
                     </label>
-                    <select
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                    <select 
+                        className="duration-200 transition-all ease-in-out w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
                         value={selectedCategory}
                         onChange={(e) => {
                             setSelectedCategory(e.target.value);
@@ -73,8 +73,9 @@ const ShopPage1 = () => {
                             -- Select a Category --
                         </option>
                         {Object.keys(categories).map((category) => (
-                            <option key={category} value={category}>
+                            <option className="text-md font-semibold" key={category} value={category}>
                                 {category}
+
                             </option>
                         ))}
                     </select>
@@ -88,7 +89,7 @@ const ShopPage1 = () => {
                     <input
                         type="text"
                         placeholder="Enter your shop name"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                        className=" duration-200 transition-all ease-in-out w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
                         required
                     />
                 </div>
@@ -98,7 +99,7 @@ const ShopPage1 = () => {
                     </label>
                     <textarea
                         placeholder="Describe your shop"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                        className="duration-200 transition-all ease-in-out w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
                         rows="4"
                         required
                     ></textarea>
@@ -146,9 +147,9 @@ const ShopPage1 = () => {
                 )}
 
                 {/* Submit Button */}
-                <div className="text-center mt-8">
-                    <button className="px-6 py-3 bg-green-500 text-white rounded-lg shadow-lg hover:bg-green-600 transition">
-                        Proceed
+                <div className="text-center mt-10">
+                    <button className="px-6 py-3 bg-green-500 text-white rounded shadow-lg hover:bg-green-600 transition">
+                        Porceed to the store
                     </button>
                 </div>
             </div>
