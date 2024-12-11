@@ -48,7 +48,7 @@ const Carousel = ({ items }) => {
             <Slider {...settings}>
                 {items.map((item, index) => (
                     <div key={index} className="p-4">
-                        <div className="bg-white shadow-lg h-44 p-6">
+                        <div className="bg-white border h-44 p-6">
                             <div>
                             <div className="flex justify-start gap-2 items-start">
                                 <div className="w-7 h-7 rounded-full border-2 border-zinc-600 flex justify-center items-center text-xs font-bold shadow-xl ">{item.name[0]}</div>
@@ -69,7 +69,7 @@ const Carousel = ({ items }) => {
                             }
 
                             </div>
-                            <p className="text-sm text-gray-500">{item.content.length > 150 ? `${item.content.slice(0, 150)}...` : item.content}</p>
+                            <p className="text-sm text-gray-500">{item.content.length > 150 ? `${item.content.slice(0, 140)}...` : item.content}</p>
                         </div>
                     </div>
                 ))}

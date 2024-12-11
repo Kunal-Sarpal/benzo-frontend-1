@@ -13,15 +13,20 @@ const Navbar = () => {
   return (
     <React.Fragment>
       {/* Mobile Menu Toggle */}
+
       <button
-        className="md:hidden fixed top-4 left-4 z-50 p-2 bg-green-500 text-white rounded-full shadow-lg"
+        className="md:hidden fixed top-4  z-50 p-2  w-full text-white flex justify-end pr-1 rounded-full "
         onClick={() => setIsOpen(!isOpen)}
       >
+        <div className='bg-green-500 p-2 rounded-full'>
         {isOpen ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
+
+        </div>
       </button>
 
+
       <div
-        className={` h-full ${isOpen ? "w-64" : "w-0"} md:w-64 bg-green-500 text-white shadow-lg transition-all duration-300 ease-in-out overflow-hidden`}
+        className={` h-full fixed md:static z-40 ${isOpen ? "w-64" : "w-0"} md:w-64 bg-green-500 text-white shadow-lg transition-all duration-300 ease-in-out overflow-hidden`}
       >
         {/* Profile Section */}
         <div className="flex items-center gap-4 p-6 mt-6">
