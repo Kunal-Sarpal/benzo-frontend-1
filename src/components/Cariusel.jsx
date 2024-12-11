@@ -1,24 +1,26 @@
 import React from "react";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Carousel = ({ items }) => {
     const settings = {
-        dots: true, // Enable dots for navigation
-        infinite: true, // Enable infinite scroll
-        speed: 500, // Transition speed in ms
-        slidesToShow: 1, // Number of items to show
-        slidesToScroll: 1, // Number of items to scroll at a time
-        autoplay: true, // Auto-play the carousel
-        autoplaySpeed: 3000, // Delay between slides in ms
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
         responsive: [
             {
-                breakpoint: 1024, // Breakpoint for tablets
+                breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
                 },
             },
             {
-                breakpoint: 600, // Breakpoint for mobile
+                breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
                 },
@@ -26,21 +28,11 @@ const Carousel = ({ items }) => {
         ],
     };
 
-    const getStars = (rating) => {
-        switch (rating) {
-            case 5:
-                return <h3 className="text-xs">⭐⭐⭐⭐⭐</h3>;
-            case 4:
-                return <h3 className="text-xs">⭐⭐⭐⭐</h3>;
-            case 3:
-                return <h3 className="text-xs">⭐⭐⭐</h3>;
-            case 2:
-                return <h3>⭐⭐</h3>;
-            case 1:
-                return <h3>⭐</h3>;
-            default:
-                return <h3>No Rating</h3>;
-        }
+    const renderStars = (rating) => {
+        const stars = Array.from({ length: 5 }, (_, i) => (
+            <span key={i} className={i < rating ? "text-yellow-500" : "text-gray-300"}>★</span>
+        ));
+        return <div className="flex text-xs">{stars}</div>;
     };
 
     return (
@@ -48,28 +40,29 @@ const Carousel = ({ items }) => {
             <Slider {...settings}>
                 {items.map((item, index) => (
                     <div key={index} className="p-4">
-                        <div className="bg-white border h-44 p-6">
-                            <div>
-                            <div className="flex justify-start gap-2 items-start">
-                                <div className="w-7 h-7 rounded-full border-2 border-zinc-600 flex justify-center items-center text-xs font-bold shadow-xl ">{item.name[0]}</div>
-                                <h3 className="text-sm font-normal">{item.name}</h3>
-                            </div>
-                                <div className="flex text-xs gap-2 font-semibold w-full text-end text-zinc-500">
-                                    <div>{item.name.slice(0, 4) + "_User"}</div>
-                                    <div>{item.date}</div>
+                        <div className="bg-white border shadow-lg rounded-xl p-6 h-52">
+                            <div className="flex justify-between items-center mb-4">
+                                <div className="flex items-center gap-3">
+                                    <div className="w-10 h-10 rounded-full bg-gray-200 flex justify-center items-center text-sm font-semibold text-gray-700">
+                                        {item.name[0].toUpperCase()}
+                                    </div>
+                                    <div>
+                                        <h3 className="text-sm font-medium text-gray-800">{item.name}</h3>
+                                        <p className="text-xs text-gray-500">{item.name.slice(0, 4) + "_User"}</p>
+                                    </div>
                                 </div>
-
+                                <p className="text-xs text-gray-400">{item.date}</p>
                             </div>
-                            
 
-                            <div className="mt-2">
-                            {
-                                
-                                getStars(item.rating,'sm')
-                            }
-
+                            <div className="mb-2">
+                                {renderStars(item.rating)}
                             </div>
-                            <p className="text-sm text-gray-500">{item.content.length > 150 ? `${item.content.slice(0, 140)}...` : item.content}</p>
+
+                            <p className="text-sm text-gray-600">
+                                {item.content.length > 150
+                                    ? `${item.content.slice(0, 140)}...`
+                                    : item.content}
+                            </p>
                         </div>
                     </div>
                 ))}
