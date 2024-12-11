@@ -24,7 +24,7 @@ const ShopPage = () => {
             className={`md:hidden   rounded-md  text-lg font-semibold text-gray-800 left-0 w-full transition duration-200  ${rank ?'absolute right-3  text-xl font-bold z-[999]':'relative z-0'}`}
             onClick={() => setRank((prev) => !prev)}
           >
-            {rank ? <div className="border p-4 w-fit flex justify-end gap-3  border-red-500 ml-3 rounded-full bg-red-300 items-center"><AiOutlineClose /> </div> : <div className="border rounded-xl shadow py-2  text-md font-bold text-gray-800 px-4">Check Shop Rank</div>}
+            {rank ? <div className="border p-4 w-fit flex justify-end gap-3  border-red-500 ml-3 rounded-full bg-red-300 items-center"><AiOutlineClose /> </div> : <div className="border rounded-xl shadow py-2  text-md font-light text-gray-800 px-4 tracking-wide mt-2">Check Shop Rank </div>}
           </button>
 
           {/* Mobile View */}
