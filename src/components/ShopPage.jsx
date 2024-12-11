@@ -11,8 +11,13 @@ import { PiRankingFill } from "react-icons/pi";
 const ShopPage = () => {
   const [rank,setRank] = useState();
   return (
+<<<<<<< HEAD
     <div className="bg-[#fafafa] h-fit flex flex-col w-full items-center">
       <div className="w-full max-w-7xl  bg-white rounded-3x md:p-8 px-3">
+=======
+    <div className="bg-[#fafafa] min-h-screen flex flex-col items-center">
+      <div className="w-full max-w-7xl bg-white rounded-3x md:p-8 px-4 ">
+>>>>>>> b24c518d2b1f363ec6e7a9c2f2efb6bc4d39358d
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-10">
           <div>
@@ -26,13 +31,17 @@ const ShopPage = () => {
             className={`md:hidden   rounded-md  text-lg font-semibold text-gray-800 left-0 w-full transition duration-200  ${rank ?'absolute right-3  text-xl font-bold z-[999]':'relative z-0'}`}
             onClick={() => setRank((prev) => !prev)}
           >
+<<<<<<< HEAD
             {rank ? <div className="border p-4 w-fit flex justify-end gap-3  border-red-500 ml-3 rounded-full bg-red-300 items-center"><AiOutlineClose /> </div> : <div className="border w-fit font-normal shadow py-2  text-md  text-gray-800 px-4 tracking-wide mt-2 text-sm flex justify-between items-center gap-2">Check Shop Rank <span><PiRankingFill size={20} />
+=======
+            {rank ? <div className="border p-4 w-fit flex justify-end gap-3 mt-2 border-zinc-500 ml-3 rounded-full bg-zinc-300 items-center"><AiOutlineClose /> </div> : <div className="border w-fit font-normal shadow py-2  text-md  text-gray-800 px-4 tracking-wide mt-2 text-sm flex justify-between items-center gap-2">Check Shop Rank <span><PiRankingFill size={20} />
+>>>>>>> b24c518d2b1f363ec6e7a9c2f2efb6bc4d39358d
 </span> </div>}
           </button>
 
           {/* Mobile View */}
           {rank && (
-            <div className="md:hidden backdrop-blur-md  flex justify-center items-center left-0 absolute p-5 top-0 w-full  h-screen  text-[#1F2937] z-[998] font-extrabold text-5xl mt-4 lg:mt-0">
+            <div className="md:hidden backdrop-blur-md  flex justify-center items-center left-0 fixed top-0 w-full  h-screen  text-[#1F2937] z-[998] font-extrabold text-5xl  lg:mt-0">
               
               <div className="border-2 w-24 h-24 rounded-full border-[#1F2937] flex justify-center items-center p-16 bg-white   ">
                 #17
@@ -41,7 +50,11 @@ const ShopPage = () => {
           )}
 
           {/* Desktop View */}
+<<<<<<< HEAD
           <div className="hidden md:block bg-gradient-to-t from-yellow-500 rounded-xl  shadow text-[#1F2937]  p-3 font-bold text-xl mt-4 lg:mt-0 ">
+=======
+          <div className="hidden md:block bg-gradient-to-t from-yellow-500 rounded-xl  shadow text-[#1F2937]  p-3 font-extrabold text-4xl mt-4 lg:mt-0 ">
+>>>>>>> b24c518d2b1f363ec6e7a9c2f2efb6bc4d39358d
             #17
           </div>
          
@@ -72,7 +85,11 @@ const UserMenu = () => {
     "Discover the freshest food and quality products at our store! We ensure customer satisfaction with every purchase.";
 
   return (
+<<<<<<< HEAD
     <div className="md:p-8 p- shadow relative bg-white rounded-lg">
+=======
+    <div className="md:p-8 p-4 flex border shadow relative bg-white rounded-lg">
+>>>>>>> b24c518d2b1f363ec6e7a9c2f2efb6bc4d39358d
       {/* User Avatar */}
       <div className="md:w-40 absolute bottom-36 right-3 md:bottom-20 md:right-10 w-24 h-24 md:h-40 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full overflow-hidden border-4 border-white shadow-md">
         <img
