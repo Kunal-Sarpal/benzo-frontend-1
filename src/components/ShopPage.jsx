@@ -11,12 +11,12 @@ import { PiRankingFill } from "react-icons/pi";
 const ShopPage = () => {
   const [rank,setRank] = useState();
   return (
-    <div className="bg-[#fafafa] h-fit flex flex-col w-full items-center">
+    <div className="bg-[#fafafa] h-fit flex flex-col w-full items-center ">
       <div className="w-full max-w-7xl  bg-white rounded-3x md:p-8 px-3">
         {/* Header Section */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-10">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-10 p-2">
           <div>
-            <h1 className="text-4xl font-bold text-gray-800 mb-2">Welcome to Fresh Food!</h1>
+            <h1 className="text-4xl font-bold text-gray-800 mb-2 ">Welcome to Fresh Food!</h1>
             <p className="text-gray-600 text-lg">
               17 November 2024
               <span className="text-green-600 ml-2 uppercase text-sm">. Open</span>
@@ -72,7 +72,7 @@ const UserMenu = () => {
     "Discover the freshest food and quality products at our store! We ensure customer satisfaction with every purchase.";
 
   return (
-    <div className="md:p-8 p- shadow relative bg-white rounded-lg">
+    <div className="md:p-8 p-3  shadow relative bg-white rounded-lg">
       {/* User Avatar */}
       <div className="md:w-40 absolute bottom-36 right-3 md:bottom-20 md:right-10 w-24 h-24 md:h-40 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full overflow-hidden border-4 border-white shadow-md">
         <img
