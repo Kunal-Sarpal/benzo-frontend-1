@@ -39,9 +39,9 @@ const Carousel = ({ items }) => {
         <div className="carousel">
             <Slider {...settings}>
                 {items.map((item, index) => (
-                    <div key={index} className="p-4">
-                        <div className="bg-white border shadow-lg rounded-xl p-6 h-52">
-                            <div className="flex justify-between items-center mb-4">
+                    <div key={index} className="p-4 ">
+                        <div className="bg-white overflow-hidden border shadow-lg rounded-xl p-6 h-52 ">
+                            <div className="flex justify-between items-center mb-4 ">
                                 <div className="flex items-center gap-3">
                                     <div className="w-10 h-10 rounded-full bg-gray-200 flex justify-center items-center text-sm font-semibold text-gray-700">
                                         {item.name[0].toUpperCase()}
