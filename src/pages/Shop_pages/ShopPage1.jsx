@@ -53,7 +53,7 @@ const ShopPage1 = () => {
     };
 
     return (
-        <div className="min-h-screen   bg-green-100  flex flex-col items-center justify-center">
+        <div className="min-h-screen   bg-[#FAFAFA]  flex flex-col items-center justify-center">
             <div className="w-full  md:max-w-4xl p-10 md:p-20  bg-white shadow-lg border-green-500 duration-200 transition-all ease-in-out h-screen md:h-fit">
                 <h1 className="text-3xl font-normal text-gray-800 mb-8 text-center">
                     Tell us About Your <span className="text-green-500">Brand</span>
